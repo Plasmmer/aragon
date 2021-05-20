@@ -114,6 +114,27 @@ export const networkConfigs = {
       portisDappId ? { id: 'portis', conf: portisDappId } : null,
     ].filter(p => p),
   },
+  polygon: {
+    addresses: {
+      ensRegistry:
+        localEnsRegistryAddress || '0x4E065c622d584Fbe5D9078C3081840155FA69581',
+    },
+    nodes: {
+      defaultEth: 'wss://rpc-mainnet.matic.quiknode.pro',
+    },
+    settings: {
+      chainId: 137,
+      name: 'Polygon',
+      shortName: 'polygon',
+      type: 'private',
+      live: true,
+    },
+    providers: [
+      { id: 'provided' },
+      { id: 'frame' },
+      portisDappId ? { id: 'portis', conf: portisDappId } : null,
+    ].filter(p => p),
+  },
   unknown: {
     addresses: {
       ensRegistry: localEnsRegistryAddress,

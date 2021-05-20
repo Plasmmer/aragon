@@ -45,6 +45,8 @@ const INITIAL_DAO_STATE = {
   repos: [],
 }
 
+// TODO: add polygon
+// ['polygon', 'Polygon Network', 'https://aragon.polygon.1hive.org/'],
 const SELECTOR_NETWORKS = [
   ['xdai', 'xDai Network', 'https://aragon.1hive.org/'],
   ['main', 'Ethereum Mainnet', 'https://client.aragon.org/'],
