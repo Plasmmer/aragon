@@ -45,8 +45,10 @@ const INITIAL_DAO_STATE = {
   repos: [],
 }
 
+
 const SELECTOR_NETWORKS = [
   ['xdai', 'xDai Network', 'https://aragon.1hive.org/'],
+  ['polygon', 'Polygon Network', 'https://aragon.1hive.org/'],
   ['main', 'Ethereum Mainnet', 'https://client.aragon.org/'],
   [
     'rinkeby',
