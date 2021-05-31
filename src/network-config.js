@@ -120,7 +120,7 @@ export const networkConfigs = {
         localEnsRegistryAddress || '0x4E065c622d584Fbe5D9078C3081840155FA69581',
     },
     nodes: {
-      defaultEth: 'wss://rpc-mainnet.matic.quiknode.pro',
+      defaultEth: 'wss://ws-matic-mainnet.chainstacklabs.com',
     },
     settings: {
       chainId: 137,
