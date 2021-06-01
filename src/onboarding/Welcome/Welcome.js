@@ -7,6 +7,7 @@ import Header from '../Header/Header'
 import OpenOrg from './OpenOrg'
 import Suggestions from './Suggestions'
 import WelcomeAction from './WelcomeAction'
+import { setEthNetworkType } from '../../local-settings'
 
 import actionCreate from './assets/action-create.png'
 import actionOpen from './assets/action-open.png'
@@ -34,6 +35,7 @@ const Welcome = React.memo(function Welcome({
 
   const changeNetwork = useCallback(
     index => {
+      setEthNetworkType(selectorNetworksSorted[index].type)
       window.location = selectorNetworksSorted[index].url
     },
     [selectorNetworksSorted]
