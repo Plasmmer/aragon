@@ -46,10 +46,11 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  ['xdai', 'xDai Network', 'https://aragon.1hive.org/'],
-  ['polygon', 'Polygon Network', 'https://aragon.1hive.org/'],
-  ['main', 'Ethereum Mainnet', 'https://client.aragon.org/'],
+  [100, 'xdai', 'xDai Network', 'https://aragon.1hive.org/'],
+  [137, 'polygon', 'Polygon Network', 'https://aragon.1hive.org/'],
+  [1, 'main', 'Ethereum Mainnet', 'https://client.aragon.org/'],
   [
+    4,
     'rinkeby',
     'Ethereum Testnet (Rinkeby)',
     'https://rinkeby.client.aragon.org/',
