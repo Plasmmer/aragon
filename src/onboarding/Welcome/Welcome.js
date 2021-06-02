@@ -25,10 +25,10 @@ const Welcome = React.memo(function Welcome({
 
   const selectorNetworksSorted = useMemo(() => {
     return selectorNetworks
-      .map(([type, name, url]) => ({ type, name, url }))
+      .map(([chainId, type, name, url]) => ({ chainId, type, name, url }))
       .sort((a, b) => {
-        if (b.type === network.type) return 1
-        if (a.type === network.type) return -1
+        if (b.chainId === network.chainId) return 1
+        if (a.chainId === network.chainId) return -1
         return 0
       })
   }, [selectorNetworks])
