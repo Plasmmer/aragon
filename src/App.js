@@ -46,10 +46,10 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  [100, 'xdai', 'xDai Network', '#'],
-  [137, 'polygon', 'Polygon Network', '#'],
-  [1, 'main', 'Ethereum Mainnet', '#'],
-  [4, 'rinkeby', 'Ethereum Testnet (Rinkeby)', '#'],
+  [100, 'xdai', 'xDai Network', '.'],
+  [137, 'polygon', 'Polygon Network', '.'],
+  [1, 'main', 'Ethereum Mainnet', '.'],
+  [4, 'rinkeby', 'Ethereum Testnet (Rinkeby)', '.'],
 ]
 if (network.type === 'ropsten') {
   SELECTOR_NETWORKS.push([
