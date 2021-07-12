@@ -46,15 +46,10 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  [100, 'xdai', 'xDai Network', 'https://aragon.1hive.org/'],
-  [137, 'polygon', 'Polygon Network', 'https://aragon.1hive.org/'],
-  [1, 'main', 'Ethereum Mainnet', 'https://client.aragon.org/'],
-  [
-    4,
-    'rinkeby',
-    'Ethereum Testnet (Rinkeby)',
-    'https://rinkeby.client.aragon.org/',
-  ],
+  [100, 'xdai', 'xDai Network', '#'],
+  [137, 'polygon', 'Polygon Network', '#'],
+  [1, 'main', 'Ethereum Mainnet', '#'],
+  [4, 'rinkeby', 'Ethereum Testnet (Rinkeby)', '#'],
 ]
 if (network.type === 'ropsten') {
   SELECTOR_NETWORKS.push([
