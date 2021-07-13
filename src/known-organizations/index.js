@@ -52,14 +52,6 @@ export const KnownOrganizations = {
         template: TEMPLATE_COMPANY,
       },
       {
-        address: '0xd0753e9d0b7db1da057a7be2cc0b81d20201c4d8',
-        domain: 'aragonchina.aragonid.eth',
-        name: 'Aragon China',
-        image: AragonChinaImage,
-        recommended: true,
-        template: null,
-      },
-      {
         address: '0x535d7922966a778d890a15be1df11d0846ebaeb8',
         domain: 'floflis.aragonid.eth',
         name: 'Floflis',
@@ -86,6 +78,14 @@ export const KnownOrganizations = {
         name: 'Lido',
         template: TEMPLATE_COMPANY,
         recommended: true,
+      },
+      {
+        address: '0xacf1921f2298d977843fe8b6d56d57e9060799ef',
+        domain: 'aragonchina.aragonid.eth',
+        name: 'Aragon China',
+        image: AragonChinaImage,
+        recommended: true,
+        template: TEMPLATE_COMPANY,
       },
       {
         address: '0xF47917B108ca4B820CCEA2587546fbB9f7564b56',
