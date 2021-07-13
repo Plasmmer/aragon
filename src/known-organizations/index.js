@@ -20,6 +20,11 @@ import cryptokekImage from './images/cryptokek.svg'
 import nucypherDaoImage from './images/nucypher.svg'
 import nucypherIbexImage from './images/nucypher-ibex.png'
 import lidoImage from './images/lido.svg'
+import GamlrImage from './images/gamlr.png'
+import PlasmmerImage from './images/plasmmer.jpg'
+import AragonChinaImage from './images/aragonchina.png'
+import FloflisImage from './images/floflis.jpg'
+import OPIImage from './images/opi.png'
 
 const TEMPLATE_DEMOCRACY = 'Democracy'
 const TEMPLATE_REPUTATION = 'Reputation'
@@ -28,6 +33,50 @@ const TEMPLATE_MEMBERSHIP = 'Membership'
 const TEMPLATE_DANDELION = 'Dandelion'
 
 export const KnownOrganizations = {
+  xdai: new Map(
+    [
+      {
+        address: '0xe9938dbafba04f609c5d484b2871adae204c90fa',
+        domain: 'gamlr.aragonid.eth',
+        name: 'Gamlr',
+        image: GamlrImage,
+        recommended: true,
+        template: TEMPLATE_COMPANY,
+      },
+      {
+        address: '0xbc2d0266f338ee49fc5639d7b6fdd748fe52946a',
+        domain: 'plasmmer.aragonid.eth',
+        name: 'Plasmmer',
+        image: PlasmmerImage,
+        recommended: true,
+        template: TEMPLATE_COMPANY,
+      },
+      {
+        address: '0xd0753e9d0b7db1da057a7be2cc0b81d20201c4d8',
+        domain: 'aragonchina.aragonid.eth',
+        name: 'Aragon China',
+        image: AragonChinaImage,
+        recommended: true,
+        template: null,
+      },
+      {
+        address: '0x535d7922966a778d890a15be1df11d0846ebaeb8',
+        domain: 'floflis.aragonid.eth',
+        name: 'Floflis',
+        image: FloflisImage,
+        recommended: true,
+        template: TEMPLATE_COMPANY,
+      },
+      {
+        address: '0x45e7702b62ee9e53add9698523bf503556aa6697',
+        domain: 'opi.aragonid.eth',
+        name: 'Open Planet Initiative (bricked by Vitalik)',
+        image: OPIImage,
+        recommended: true,
+        template: TEMPLATE_REPUTATION,
+      },
+    ].map(org => [org.address.toLowerCase(), org])
+  ),
   main: new Map(
     [
       {
@@ -250,6 +299,7 @@ export const KnownOrganizations = {
       },
     ].map(org => [org.address.toLowerCase(), org])
   ),
+  
 
 }
 
