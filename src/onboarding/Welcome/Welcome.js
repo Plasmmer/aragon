@@ -7,9 +7,11 @@ import Header from '../Header/Header'
 import OpenOrg from './OpenOrg'
 import Suggestions from './Suggestions'
 import WelcomeAction from './WelcomeAction'
+import { setDefaultEthNode, setEthNetworkType } from '../../local-settings'
 
 import actionCreate from './assets/action-create.png'
 import actionOpen from './assets/action-open.png'
+import { getNetworkConfig } from '../../network-config'
 
 const Welcome = React.memo(function Welcome({
   createError,
@@ -24,16 +26,21 @@ const Welcome = React.memo(function Welcome({
 
   const selectorNetworksSorted = useMemo(() => {
     return selectorNetworks
-      .map(([type, name, url]) => ({ type, name, url }))
+      .map(([chainId, type, name, url]) => ({ chainId, type, name, url }))
       .sort((a, b) => {
-        if (b.type === network.type) return 1
-        if (a.type === network.type) return -1
+        if (b.chainId === network.chainId) return 1
+        if (a.chainId === network.chainId) return -1
         return 0
       })
   }, [selectorNetworks])
 
   const changeNetwork = useCallback(
     index => {
+      const networkType = selectorNetworksSorted[index].type
+      const networkConfig = getNetworkConfig(networkType)
+
+      setEthNetworkType(networkType)
+      setDefaultEthNode(networkConfig.nodes.defaultEth)
       window.location = selectorNetworksSorted[index].url
     },
     [selectorNetworksSorted]

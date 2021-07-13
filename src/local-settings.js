@@ -120,13 +120,17 @@ export function getEthNetworkType() {
   return getLocalSetting(ETH_NETWORK_TYPE) || 'rinkeby'
 }
 
+export function setEthNetworkType(networkType) {
+  return setLocalSetting(ETH_NETWORK_TYPE, networkType)
+}
+
 export function getEthSubscriptionEventDelay() {
   const delay = parseInt(getLocalSetting(ETH_SUBSCRIPTION_EVENT_DELAY), 10)
   return Number.isFinite(delay) ? delay : 0
 }
 
 export function getIpfsGateway() {
-  return getLocalSetting(IPFS_GATEWAY) || 'https://ipfs.eth.aragon.network/ipfs'
+  return getLocalSetting(IPFS_GATEWAY) || 'https://ipfs.io/ipfs'
 }
 
 export function setIpfsGateway(gateway) {

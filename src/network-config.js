@@ -100,29 +100,6 @@ export const networkConfigs = {
     },
     providers: [{ id: 'provided' }, { id: 'frame' }],
   },
-  // xDai is an experimental chain in the Aragon Client. It's possible
-  // and expected that a few things will break.
-  xdai: {
-    addresses: {
-      ensRegistry:
-        localEnsRegistryAddress || '0xaafca6b0c89521752e559650206d7c925fd0e530',
-    },
-    nodes: {
-      defaultEth: 'wss://xdai.poanetwork.dev/wss',
-    },
-    settings: {
-      chainId: 100,
-      name: 'xDai',
-      shortName: 'xdai',
-      type: 'private',
-      live: true,
-    },
-    providers: [
-      { id: 'provided' },
-      { id: 'frame' },
-      portisDappId ? { id: 'portis', conf: portisDappId } : null,
-    ].filter(p => p),
-  },
   goerli: {
     addresses: {
       ensRegistry: localEnsRegistryAddress,
@@ -138,6 +115,50 @@ export const networkConfigs = {
       live: true,
     },
     providers: [{ id: 'provided' }, { id: 'frame' }],
+  },
+  // xDai is an experimental chain in the Aragon Client. It's possible
+  // and expected that a few things will break.
+  xdai: {
+    addresses: {
+      ensRegistry:
+        localEnsRegistryAddress || '0xaafca6b0c89521752e559650206d7c925fd0e530',
+    },
+    nodes: {
+      defaultEth: 'wss://xdai.1hive.org',
+    },
+    settings: {
+      chainId: 100,
+      name: 'xDai',
+      shortName: 'xdai',
+      type: 'private',
+      live: true,
+    },
+    providers: [
+      { id: 'provided' },
+      { id: 'frame' },
+      portisDappId ? { id: 'portis', conf: portisDappId } : null,
+    ].filter(p => p),
+  },
+  polygon: {
+    addresses: {
+      ensRegistry:
+        localEnsRegistryAddress || '0x4E065c622d584Fbe5D9078C3081840155FA69581',
+    },
+    nodes: {
+      defaultEth: 'wss://ws-matic-mainnet.chainstacklabs.com',
+    },
+    settings: {
+      chainId: 137,
+      name: 'Polygon',
+      shortName: 'polygon',
+      type: 'private',
+      live: true,
+    },
+    providers: [
+      { id: 'provided' },
+      { id: 'frame' },
+      portisDappId ? { id: 'portis', conf: portisDappId } : null,
+    ].filter(p => p),
   },
   unknown: {
     addresses: {

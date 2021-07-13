@@ -35,7 +35,7 @@
   "dependencies": {
     "@aragon/templates-tokens": "^1.2.1",
     "@aragon/ui": "^1.5.0",
-    "@aragon/wrapper": "^5.0.0-rc.28",
+    "@1hive/wrapper": "^5.0.0",
     "@sentry/browser": "^5.17.0",
     "@ungap/event-target": "^0.1.0",
     "clipboard-polyfill": "^2.8.6",
@@ -98,8 +98,8 @@
     "rimraf": "^2.6.2"
   },
   "resolutions": {
-    "@aragon/wrapper/web3": "1.2.6",
-    "@aragon/wrapper/web3-eth-abi": "1.2.6"
+    "@1hive/wrapper/web3": "1.2.6",
+    "@1hive/wrapper/web3-eth-abi": "1.2.6"
   },
   "scripts": {
     "bundlewatch": "bundlewatch",
@@ -110,6 +110,7 @@
     "start:staging": "cross-env ARAGON_ENS_REGISTRY_ADDRESS=0xfe03625ea880a8cba336f9b5ad6e15b0a3b5a939 npm start",
     "start:ropsten": "cross-env ARAGON_ETH_NETWORK_TYPE=ropsten npm start",
     "start:xdai": "cross-env ARAGON_ETH_NETWORK_TYPE=xdai npm start",
+    "start:polygon": "cross-env ARAGON_ETH_NETWORK_TYPE=polygon npm start",
     "build": "node scripts/build",
     "build:local": "node scripts/build-local",
     "build:mainnet": "cross-env ARAGON_ETH_NETWORK_TYPE=main npm run build",
@@ -117,6 +118,7 @@
     "build:staging": "cross-env ARAGON_ENS_REGISTRY_ADDRESS=0xfe03625ea880a8cba336f9b5ad6e15b0a3b5a939 npm run build",
     "build:ropsten": "cross-env ARAGON_ETH_NETWORK_TYPE=ropsten npm run build",
     "build:xdai": "cross-env ARAGON_ETH_NETWORK_TYPE=xdai npm run build",
+    "build:polygon": "cross-env ARAGON_ETH_NETWORK_TYPE=polygon npm run build",
     "lint": "eslint ./src",
     "test": "npm run lint && npm run jest",
     "jest": "jest",
