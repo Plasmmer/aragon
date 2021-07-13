@@ -3,6 +3,7 @@ import {
   getEnsRegistryAddress,
   getFortmaticApiKey,
   getPortisDappId,
+  getWalletConnectRpcUrl,
 } from './local-settings'
 
 const localEnsRegistryAddress = getEnsRegistryAddress()
@@ -28,6 +29,10 @@ export const networkConfigs = {
     providers: [
       { id: 'provided' },
       { id: 'frame' },
+      {
+        id: 'walletconnect',
+        conf: getWalletConnectRpcUrl() || 'https://mainnet.eth.aragon.network',
+      },
       fortmaticApiKey ? { id: 'fortmatic', conf: fortmaticApiKey } : null,
       portisDappId ? { id: 'portis', conf: portisDappId } : null,
     ].filter(p => p),
@@ -51,6 +56,10 @@ export const networkConfigs = {
     providers: [
       { id: 'provided' },
       { id: 'frame' },
+      {
+        id: 'walletconnect',
+        conf: getWalletConnectRpcUrl() || 'https://rinkeby.eth.aragon.network',
+      },
       fortmaticApiKey ? { id: 'fortmatic', conf: fortmaticApiKey } : null,
       portisDappId ? { id: 'portis', conf: portisDappId } : null,
     ].filter(p => p),
@@ -88,6 +97,22 @@ export const networkConfigs = {
       shortName: 'Local',
       type: 'private',
       live: false,
+    },
+    providers: [{ id: 'provided' }, { id: 'frame' }],
+  },
+  goerli: {
+    addresses: {
+      ensRegistry: localEnsRegistryAddress,
+    },
+    nodes: {
+      defaultEth: 'wss://goerli-light.eth.linkpool.io/ws',
+    },
+    settings: {
+      chainId: 5,
+      name: 'Göerli testnet',
+      shortName: 'Göerli',
+      type: 'goerli', // as returned by web3.eth.net.getNetworkType()
+      live: true,
     },
     providers: [{ id: 'provided' }, { id: 'frame' }],
   },
@@ -180,4 +205,13 @@ export function sanitizeNetworkType(networkType) {
     return 'mainnet'
   }
   return networkType
+}
+
+export function getWalletConnectRPC(chainId = -1) {
+  chainId = Number(chainId)
+  const currentChain = getNetworkByChainId(chainId)
+  const walletConnect = currentChain.providers.find(
+    provider => provider.id === 'walletconnect'
+  )
+  return walletConnect ? walletConnect.conf : ''
 }

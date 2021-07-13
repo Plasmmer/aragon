@@ -49,6 +49,7 @@ const SELECTOR_NETWORKS = [
   [137, 'polygon', 'Polygon Network', '.'],
   [1, 'main', 'Ethereum Mainnet', '.'],
   [4, 'rinkeby', 'Ethereum Testnet (Rinkeby)', '.'],
+  ['goerli', 'Ethereum Testnet (Göerli)', '.'],
 ]
 if (network.type === 'ropsten') {
   SELECTOR_NETWORKS.push([

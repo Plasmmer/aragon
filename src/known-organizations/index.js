@@ -19,6 +19,7 @@ import pNetworkImage from './images/pnetwork.png'
 import cryptokekImage from './images/cryptokek.svg'
 import nucypherDaoImage from './images/nucypher.svg'
 import nucypherIbexImage from './images/nucypher-ibex.png'
+import lidoImage from './images/lido.svg'
 
 const TEMPLATE_DEMOCRACY = 'Democracy'
 const TEMPLATE_REPUTATION = 'Reputation'
@@ -29,6 +30,14 @@ const TEMPLATE_DANDELION = 'Dandelion'
 export const KnownOrganizations = {
   main: new Map(
     [
+      {
+        address: '0xb8FFC3Cd6e7Cf5a098A1c92F48009765B24088Dc',
+        domain: 'lido-dao.aragonid.eth',
+        image: lidoImage,
+        name: 'Lido',
+        template: TEMPLATE_COMPANY,
+        recommended: true,
+      },
       {
         address: '0xF47917B108ca4B820CCEA2587546fbB9f7564b56',
         domain: 'dcl.eth',
@@ -166,6 +175,14 @@ export const KnownOrganizations = {
   rinkeby: new Map(
     [
       {
+        address: '0x900f89ad80DEF8ffCAFE930B69Da111b0051Af6A',
+        domain: 'lido-dao-test-2.aragonid.eth',
+        image: lidoImage,
+        name: 'Lido',
+        template: TEMPLATE_COMPANY,
+        recommended: true,
+      },
+      {
         address: '0x43374144c33def77a0ebacec72e9c944a6c375fe',
         domain: 'reputation08.aragonid.eth',
         name: 'Example reputation organization',
@@ -221,6 +238,19 @@ export const KnownOrganizations = {
       },
     ].map(org => [org.address.toLowerCase(), org])
   ),
+  goerli: new Map(
+    [
+      {
+        address: '0xE2Bb0843167da9672534cc939c59D6F6F31d3D42',
+        domain: 'lido-testnet.aragonid.eth',
+        image: lidoImage,
+        name: 'Lido',
+        template: TEMPLATE_COMPANY,
+        recommended: true,
+      },
+    ].map(org => [org.address.toLowerCase(), org])
+  ),
+
 }
 
 // Get the organizations that might appear in the suggestions,
