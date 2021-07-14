@@ -45,12 +45,7 @@ const INITIAL_DAO_STATE = {
 }
 
 const SELECTOR_NETWORKS = [
-  [
-    100,
-    'xdai',
-    'xDai Network',
-    '.',
-  ] /* the dots are used to direct the app to the same page, as a refresh */,
+  [100, 'xdai', 'xDai Network', '.'], // the dots are used to direct the app to the same page, as a refresh
   [137, 'polygon', 'Polygon Network', '.'],
   [1, 'main', 'Ethereum Mainnet', '.'],
   [4, 'rinkeby', 'Ethereum Testnet (Rinkeby)', '.'],
