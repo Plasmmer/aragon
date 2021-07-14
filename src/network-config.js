@@ -114,7 +114,16 @@ export const networkConfigs = {
       type: 'goerli', // as returned by web3.eth.net.getNetworkType()
       live: true,
     },
-    providers: [{ id: 'provided' }, { id: 'frame' }],
+    providers: [
+      { id: 'provided' },
+      { id: 'frame' },
+      {
+        id: 'walletconnect',
+        conf: getWalletConnectRpcUrl() || 'https://goerli.prylabs.net/',
+      },
+      fortmaticApiKey ? { id: 'fortmatic', conf: fortmaticApiKey } : null,
+      portisDappId ? { id: 'portis', conf: portisDappId } : null,
+    ].filter(p => p),
   },
   // xDai is an experimental chain in the Aragon Client. It's possible
   // and expected that a few things will break.
