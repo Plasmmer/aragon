@@ -139,7 +139,8 @@ export const networkConfigs = {
       chainId: 100,
       name: 'xDai',
       shortName: 'xdai',
-      type: 'private',
+      /* type: 'private', */
+      type: 'xdai', // attempt to fix showing recommended DAOs on XDai
       live: true,
     },
     providers: [
