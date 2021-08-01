@@ -1,0 +1,11 @@
+{
+    "name": "Aragon",
+    "version": "1.0",
+    "description": "Create and manage decentralized organizations (DAOs) on Ethereum. ",
+    "author": "plasmmer",
+    "url": "https://aragon.plasmmer.com/index.html",
+    "icon": "http://aragon.plasmmer.com/favicon.caf9c731.svg",
+    "permissions" : "true",
+    "width": "700",
+    "height": "450"
+}
