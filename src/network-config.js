@@ -106,6 +106,8 @@ export const networkConfigs = {
       chainId: 100,
       testnet: false,
       ...KNOWN_CHAINS.get(100),
+      shortName: 'XDai',
+      fullName: 'XDai Mainnet',
       live: true,
     },
   },

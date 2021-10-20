@@ -49,7 +49,7 @@ export function NetworkSwitchModal({ onClose, visible }) {
 }
 
 // add new networks here
-const mainNetworksTypes = ['main', 'matic']
+const mainNetworksTypes = ['main', 'matic', 'xdai']
 const testNetworksTypes = ['rinkeby', 'mumbai']
 
 ButtonsRow.propTypes = {
