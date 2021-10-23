@@ -7,7 +7,7 @@ export const connectors = [
   {
     id: 'injected',
     properties: {
-      chainId: [1, 4, 137, 80001, 100],
+      chainId: [1, 4, 100, 137, 80001],
     },
   },
   {
