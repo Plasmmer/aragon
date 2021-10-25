@@ -89,7 +89,7 @@ export const networkConfigs = {
   // xDai is an experimental chain in the Aragon Client. It's possible
   // and expected that a few things will break.
   [chains.getChainInformation(100).type]: {
-    isActive: false,
+    isActive: true,
     addresses: {
       ensRegistry:
         localEnsRegistryAddress || '0xaafca6b0c89521752e559650206d7c925fd0e530',
