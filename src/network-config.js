@@ -1,21 +1,8 @@
-// delete if need >
-import {
-  getLocalChainId,
-  getEnsRegistryAddress,
-  getFortmaticApiKey,
-  getPortisDappId,
-  getWalletconnectRpcUrl,
-} from './local-settings'
-// < delete if need
-
 import { getEnsRegistryAddress } from './local-settings'
 import { useWallet } from './contexts/wallet'
 import { chains } from 'use-wallet'
 
 const localEnsRegistryAddress = getEnsRegistryAddress()
-const fortmaticApiKey = getFortmaticApiKey() // delete if need
-const portisDappId = getPortisDappId() // delete if need
-const walletconnectRpcUrl = getWalletconnectRpcUrl() // delete if need
 const DAI_MAINNET_TOKEN_ADDRESS = '0x6b175474e89094c44da98b954eedeac495271d0f'
 const DAI_RINKEBY_TOKEN_ADDRESS = '0x0527e400502d0cb4f214dd0d2f2a323fc88ff924'
 
@@ -58,16 +45,6 @@ export const networkConfigs = {
       testnet: true,
       ...chains.getChainInformation(3),
     },
-    // providers: ['injected', 'frame'],
-    providers: [
-      { id: 'provided' },
-      { id: 'frame' },
-      fortmaticApiKey ? { id: 'fortmatic', conf: fortmaticApiKey } : null,
-      portisDappId ? { id: 'portis', conf: portisDappId } : null,
-      walletconnectRpcUrl
-        ? { id: 'walletconnect', conf: walletconnectRpcUrl }
-        : null,
-    ].filter(p => p),
   },
   [chains.getChainInformation(4).type]: {
     isActive: true,
