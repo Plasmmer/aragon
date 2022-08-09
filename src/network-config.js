@@ -99,7 +99,7 @@ export const networkConfigs = {
         localEnsRegistryAddress || '0xaafca6b0c89521752e559650206d7c925fd0e530',
     },
     nodes: {
-      defaultEth: 'wss://xdai.1hive.org',
+      defaultEth: 'wss://rpc.gnosischain.com/wss',
     },
     settings: {
       chainId: 100,
@@ -120,7 +120,7 @@ export const networkConfigs = {
         localEnsRegistryAddress || '0x4E065c622d584Fbe5D9078C3081840155FA69581',
     },
     nodes: {
-      defaultEth: 'wss://ws-matic-mainnet.chainstacklabs.com',
+      defaultEth: 'wss://rpc-mainnet.matic.network',
     },
     settings: {
       chainId: 137,
